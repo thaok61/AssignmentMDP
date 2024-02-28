@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/amazon_ar21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/logo" />
+
+        <View
+            android:id="@+id/divider_logo"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#DADADA"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/titleZappos"
+            android:text="@string/sign_in_to_zappos_com_using_your_amazon_account"
+            app:layout_constraintTop_toBottomOf="@+id/divider_logo"
+            android:layout_marginHorizontal="48dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleZappos" />
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/forgot_password_text"
+            android:text="Forgot password?"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/forgot_button_color"
+            app:layout_constraintTop_toBottomOf="@id/titleZappos"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:hint="Email(Phone for mobile accounts)"
+            android:background="@drawable/cell_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSignIn" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:hint="Amazon Password"
+            android:background="@drawable/cell_shape"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+        <CheckBox
+            android:id="@+id/check_box_show_pw"
+            app:layout_constraintTop_toBottomOf="@+id/input_password"
+            app:layout_constraintStart_toStartOf="parent"
+            android:buttonTint="@color/check_box_color"
+            android:button="@drawable/check_box_selector"
+            android:layout_margin="16dp"
+            android:text="Show password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/check_box_keep_signed_in"
+            app:layout_constraintTop_toBottomOf="@+id/check_box_show_pw"
+            app:layout_constraintStart_toStartOf="parent"
+            android:buttonTint="@color/check_box_color"
+            android:button="@drawable/check_box_selector"
+            android:layout_margin="16dp"
+            android:text="Keep me signed in."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/check_box_keep_signed_in"
+            app:layout_constraintTop_toBottomOf="@id/check_box_show_pw"
+            android:clickable="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:text="Details"
+            android:textColor="@color/forgot_button_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_sign_in"
+            android:text="@string/sign_in"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:background="#EED288"
+            app:layout_constraintTop_toBottomOf="@+id/check_box_keep_signed_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#DADADA"
+            app:layout_constraintTop_toTopOf="@id/textNewAmazon"
+            app:layout_constraintBottom_toBottomOf="@id/textNewAmazon"
+            app:layout_constraintEnd_toStartOf="@id/textNewAmazon"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#DADADA"
+            app:layout_constraintTop_toTopOf="@id/textNewAmazon"
+            app:layout_constraintBottom_toBottomOf="@id/textNewAmazon"
+            app:layout_constraintStart_toEndOf="@id/textNewAmazon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
+
+
+        <TextView
+            android:id="@+id/textNewAmazon"
+            android:text="New to Amazon?"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_sign_in"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/button_create_account"
+            android:text="Create a new Amazon account"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/textNewAmazon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/end_section_create_button"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#DADADA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_create_account"
+            android:layout_margin="16dp" />
+
+        <TextView
+            android:layout_margin="16dp"
+            android:text="Condition of Use Privacy Notice"
+            android:clickable="true"
+            android:textColor="@color/forgot_button_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/end_section_create_button"
+            android:id="@+id/privacy_note"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_margin="16dp"
+            android:text="1996-2017, Amazon.com, Inc. or its affiliates"
+            android:clickable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/privacy_note"
+            android:id="@+id/footerTv"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
