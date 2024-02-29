@@ -82,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:padding="8dp"
+            android:inputType="textPassword"
             android:hint="Amazon Password"
             android:background="@drawable/cell_shape"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +129,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/black"
-            android:background="#EED288"
+            android:background="#FFFFC107"
             app:layout_constraintTop_toBottomOf="@+id/check_box_keep_signed_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -175,7 +176,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/black"
 
-            android:background="@color/white"
+            android:background="#F1F0EE"
             app:layout_constraintTop_toBottomOf="@+id/textNewAmazon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
