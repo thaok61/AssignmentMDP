@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newsMenuItem"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/news"/>
+    <item
+        android:id="@+id/eventsMenuItem"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="@string/events"/>
+    <item
+        android:id="@+id/archivesMenuItem"
+        android:icon="@drawable/baseline_history_edu_24"
+        android:title="@string/historical_archives"/>
+    <item
+        android:id="@+id/elseMenuItem"
+        android:visible="false"
+        android:icon="@drawable/baseline_history_edu_24"
+        android:title="@string/historical_archives"/>
+</menu>
