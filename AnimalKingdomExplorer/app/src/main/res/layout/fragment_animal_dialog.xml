@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/title_sport_dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/add_animal"
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/nameTxtLayout"
+        app:layout_constraintTop_toBottomOf="@id/title_sport_dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameTxtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/habitatTxtLayout"
+        app:layout_constraintTop_toBottomOf="@id/nameTxtLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/habitatTxtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/habitat" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/dietTxtLayout"
+        app:layout_constraintTop_toBottomOf="@id/habitatTxtLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dietTxtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/diet" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/dietTxtLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/addAnimalItem"
+        android:text="@string/add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
